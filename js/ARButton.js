@@ -75,9 +75,10 @@ class ARButton {
             button.style.display = '';
 
             button.style.cursor = 'pointer';
-            button.style.left = 'calc(50% - 140px)';
+            button.style.left = '50%';
+            button.style.bottom = '50%';
             button.style.width = '240px';
-
+            button.style.transform = "translate(-50%, 50%)";
             button.textContent = 'Ready for the big jump?!';
 
             button.onmouseenter = function () {
@@ -112,7 +113,6 @@ class ARButton {
 
         function stylizeElement( element ) {
             element.style.position = 'absolute';
-            element.style.bottom = '20px';
             element.style.padding = '12px 6px';
             element.style.border = '1px solid #fff';
             element.style.borderRadius = '4px';

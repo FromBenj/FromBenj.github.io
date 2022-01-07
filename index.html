@@ -66,20 +66,10 @@
 
         const loader = new GLTFLoader();
         function onSelect() {
-/*
-            const material = new THREE.MeshPhongMaterial( { color: 0xffffff * Math.random() } );
-            const mesh = new THREE.Mesh( geometry, material );
-            mesh.position.set( 0, 0, - 0.3 ).applyMatrix4( controller.matrixWorld );
-            mesh.quaternion.setFromRotationMatrix( controller.matrixWorld );
-            scene.add( mesh );
-*/
             loader.load('./3d/plankton/scene.gltf', function(gltf){
                 const mesh = gltf.scene.children[0];
-                mesh.scale.set(0.1, 0.1, 0.1);
-                //mesh.rotateZ(1.5708);
-                //mesh.rotateX(1.5708);
-                //mesh.rotateY(1.5708);
                 mesh.position.set( 0, 0, -1).applyMatrix4( controller.matrixWorld );
+                mesh.scale.set(0.1, 0.1, 0.1);
                 //mesh.quaternion.setFromRotationMatrix( controller.matrixWorld );
                 scene.add( mesh );
             })
